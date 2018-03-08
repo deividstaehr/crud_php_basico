@@ -12,7 +12,7 @@ ini_set('display_errors', '1');
 ini_set('error_reporting', '1');
 
 /**
- * Dump a variable a die
+ * Dump a variable and die
  *
  * @param   variable for debug
  * @return  void
