@@ -21,13 +21,13 @@ CREATE TABLE produtos (
 -- Índices de tabela `categorias`
 --
 ALTER TABLE categorias
-  ADD CONSTRAINT pk_categorias PRIMARY KEY (id);
+  ADD CONSTRAINT pk_categorias PRIMARY KEY(id);
 
 --
 -- Índices de tabela `produtos`
 --
 ALTER TABLE produtos
-  ADD CONSTRAINT pk_produtos PRIMARY KEY (id);
+  ADD CONSTRAINT pk_produtos PRIMARY KEY(id);
 
 --
 -- AUTO_INCREMENT de tabelas apagadas
@@ -37,5 +37,5 @@ ALTER TABLE produtos
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE produtos
-  ADD CONSTRAINT fk_produtos FOREIGN KEY (categoria_id)
-  REFERENCES categorias (id);
+  ADD CONSTRAINT fk_produtos FOREIGN KEY(categoria_id)
+  REFERENCES categorias(id);
