@@ -1,7 +1,10 @@
 <?php
-require_once "cabecalho.html";
 
-require_once "conecta.php";
+require_once 'helpers.php';
+
+require_once 'header.html';
+
+require_once "connect.php";
 
 require_once "produto_data_base.php";
 ?>
@@ -12,23 +15,24 @@ require_once "produto_data_base.php";
         <th>Preco</th>
         <th>Descricao</th>
         <th>Categoria</th>
-        <th></th>
+        <th>Ações</th>
     </tr>
     <?php
     
-        $produtos = listaProdutos($conexao);
+        $products = all();
         
-        foreach ($produtos as $produto) {
+        foreach ($products as $product) {
     ?>
-
-            <td><?=$produto["nome"]?></td>
-            <td><?=$produto["preco"]?></td>
-            <td><?=$produto["descricao"]?></td>
-            <td><?=$produto["cat_nome"]?></td>
+        <tr>
+            <td><?=$product->nome?></td>
+            <td><?=$product->preco?></td>
+            <td><?=$product->descricao?></td>
+            <td><?=$product->cat_nome?></td>
             <td>
                 <a class="btn btn-primary" href="produto-update.php">Alterar</a>
+                <a class="btn btn-primary" href="produto-update.php">Escluir</a>
             </td>
-
+        </tr>
     <?php
         }
     

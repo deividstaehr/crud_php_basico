@@ -1,5 +1,12 @@
-<?php require_once "cabecalho.html"; ?>
+<?php 
 
-<h1>Seja Bem Vindo</h1>
+require_once 'helpers.php';
 
-<?php require_once "footer.php"; ?>
+/**
+ * Require pages
+ */
+require_once "header.html"; // @header
+
+//require_once "body.php";    // @body
+
+require_once "footer.html"; // @footer
