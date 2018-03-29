@@ -1,11 +1,15 @@
+<?php
+    require_once __APP_ROOT__ . '/config/config.php';
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/loja.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="/<?php echo Core\Path::load('ASSETS'); ?>/public/css/loja.css">
+    <link rel="stylesheet" href="/<?php echo Core\Path::load('ASSETS'); ?>/public/css/bootstrap.min.css">
     <title>Minha Loja</title>
 </head>
 <body>
@@ -18,9 +22,9 @@
             </div>
             <div>
                 <ul class="nav navbar-nav">
-                    <li><a href="produto_form.php">Cadastrar Produto</a></li>
-                    <li><a href="produto_lista.php">Produtos</a></li>
-                    <li><a href="sobre.php">Sobre</a></li>
+                    <li><a href="">Cadastrar Produto</a></li>
+                    <li><a href="pages/products_list.php">Produtos</a></li>
+                    <li><a href="">Sobre</a></li>
                 </ul>
             </div>
         </div>
